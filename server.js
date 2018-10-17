@@ -23,6 +23,7 @@ var server = app.listen(3000, function () {
   console.log("Listening on port %s", server.address().port);
 });
 
+// app will call itself every 4.5mins
 setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`); 
 }, 270000);
